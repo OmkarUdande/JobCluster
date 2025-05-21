@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h2 class="text-center">Pending Approvals</h2>
+
+  <!-- ✅ Ensure pendingUsers has data before rendering -->
+  <div class="row" *ngIf="pendingUsers.length > 0; else noUsers">
+    <div class="col-md-6" *ngFor="let user of pendingUsers">
+      <div class="card admin-card">
+        <div class="card-body">
+          <h5 class="card-title">{{ user.name }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ user.role }} - {{ user.company }}</h6>
+          <p class="card-text">
+            📧 {{ user.email }}<br>
+            🏢 {{ user.company }}<br>
+            ⏳ Registered: {{ user.registeredDate }}
+          </p>
+          <button class="btn btn-success" (click)="approveUser(user)">Approve</button>
+          <button class="btn btn-danger" (click)="rejectUser(user)">Reject</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Display message when there are no users -->
+  <ng-template #noUsers>
+    <p class="text-center text-muted">No pending approvals.</p>
+  </ng-template>
+</div>

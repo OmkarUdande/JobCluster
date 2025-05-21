@@ -1,0 +1,86 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  max-width: 950px;
+  margin: 25px auto;
+  padding: 25px;
+  background-color: #1e90ff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+}
+
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.course-card {
+  background-color: white;
+  border: 3px solid #cfd8dc;
+  border-radius: 14px;
+  padding: 22px;
+  width: 85%;
+  max-width: 620px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.course-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+}
+
+.course-card h3 {
+  font-size: 24px;
+  color: #37474f;
+  margin-bottom: 12px;
+}
+
+.course-card .price {
+  font-weight: bold;
+  color: #ff4e50;
+  font-size: 20px;
+}
+
+.view-details,
+.enroll {
+  display: block;
+  width: 92%;
+  padding: 16px;
+  font-size: 19px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 12px auto;
+  transition: background-color 0.4s, box-shadow 0.4s;
+}
+
+.view-details {
+  background: linear-gradient(90deg, #0288d1, #1e90ff);
+  color: white;
+}
+
+.enroll {
+  background: linear-gradient(90deg, #ff9800, #ff4e50);
+  color: white;
+}
+
+.view-details:hover {
+  background: linear-gradient(90deg, #01579b, #1e70ff);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.enroll:hover {
+  background: linear-gradient(90deg, #e65100, #ff3d00);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}

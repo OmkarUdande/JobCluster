@@ -1,0 +1,27 @@
+<div class="role-buttons">
+  <button mat-button (click)="selectRole('jobseeker')">JobSeeker Login</button>
+  <button mat-button (click)="selectRole('admin')">Admin Login</button>
+  <button mat-button (click)="selectRole('superadmin')">SuperAdmin Login</button>
+</div>
+
+<div class="login-form">
+  <h2>Login</h2>
+  <form (ngSubmit)="login()">
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email" [(ngModel)]="credentials.email" required />
+    </div>
+    <div>
+      <label>Password:</label>
+      <input type="password" name="password" [(ngModel)]="credentials.password" required />
+    </div>
+    <button type="submit">Login</button>
+  </form>
+
+  <p *ngIf="message" class="response-message">
+  {{ message }}
+</p>
+
+</div>
+
+

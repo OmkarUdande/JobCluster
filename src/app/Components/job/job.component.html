@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let job of jobs">
+      <div class="card job-card"> <!-- ✅ Card structure matches CSS -->
+        <img [src]="job.imagePath" class="card-img-top" alt="Job Image"> <!-- ✅ Image styling -->
+        <div class="card-body">
+          <h5 class="card-title">{{ job.title }}</h5> <!-- ✅ Title formatting -->
+          <h6 class="card-subtitle mb-2 text-muted">{{ job.category }}</h6> <!-- ✅ Subtitle -->
+          <p class="card-text">
+            📍 <strong>Location:</strong> {{ job.location }}<br>
+            💰 <strong>Salary:</strong> {{ job.salary | currency }}<br>
+            <!-- ✅ <strong>Approved:</strong> {{ job.isApproved ? 'Yes' : 'No' }}<br> -->
+            🔥 <strong>Active Job:</strong> {{ job.isActive ? 'Open' : 'Closed' }}<br>
+            ⏳ <strong>Job Type:</strong> {{ job.jobType }}
+          </p>
+          <button class="btn btn-primary" (click)="openApplicationForm(job)">Apply Now</button> <!-- ✅ Opens form -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Popup Form for Job Application -->
+<div *ngIf="selectedJob" class="modal-container">
+  <div class="modal-content">
+    <h3>Apply for {{ selectedJob.title }}</h3>
+    <form (ngSubmit)="submitApplication()">
+      <div class="form-group">
+        <label>Upload Resume</label>
+        <input type="file" (change)="onFileSelected($event)">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Application</button>
+      <button type="button" class="btn btn-secondary" (click)="closeApplicationForm()">Cancel</button>
+    </form>
+  </div>
+</div>

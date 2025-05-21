@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <h2 class="text-center">Admin Panel</h2>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-links">
+    <button class="btn btn-primary" (click)="showForm('job')">Post a Job</button>
+    <button class="btn btn-secondary" (click)="showForm('course')">Upload a Course</button>
+  </div>
+
+  <!-- Conditional Rendering for Job Upload Form -->
+  <div *ngIf="selectedForm === 'job'">
+    <app-job-upload></app-job-upload>
+  </div>
+
+  <!-- Conditional Rendering for Course Upload Form -->
+  <div *ngIf="selectedForm === 'course'">
+    <app-course-upload></app-course-upload>
+  </div>
+
+  <!-- Displaying Uploaded Jobs & Courses -->
+  <div class="uploaded-section">
+    <h3>Recently Uploaded Jobs</h3>
+    <div class="job-list" *ngFor="let job of jobs">
+      <div class="job-card">
+        <h5>{{ job.title }}</h5>
+        <p>📍 {{ job.location }}</p>
+      </div>
+    </div>
+
+    <h3>Recently Uploaded Courses</h3>
+    <div class="course-list" *ngFor="let course of courses">
+      <div class="course-card">
+        <h5>{{ course.title }}</h5>
+        <p>⏳ {{ course.duration }}</p>
+      </div>
+    </div>
+  </div>
+</div>

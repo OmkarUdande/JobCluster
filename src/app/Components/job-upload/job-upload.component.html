@@ -1,0 +1,71 @@
+<div class="container mt-4">
+  <h2 class="text-center">Post a New Job</h2>
+  <div class="admin-form"> <!-- ✅ Matches your CSS -->
+    <form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+
+      <!-- Title -->
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" formControlName="title" required />
+      </div>
+
+      <!-- Description -->
+      <div class="form-group">
+        <label>Description</label>
+        <textarea formControlName="description" required></textarea>
+      </div>
+
+      <!-- Location -->
+      <div class="form-group">
+        <label>Location</label>
+        <input type="text" formControlName="location" required />
+      </div>
+
+      <!-- Salary -->
+      <div class="form-group">
+        <label>Salary</label>
+        <input type="number" formControlName="salary" required />
+      </div>
+
+      <!-- Upload Image -->
+      <div class="form-group">
+        <label>Upload Image</label>
+        <input type="file" (change)="onFileSelected($event)">
+      </div>
+
+      <!-- Category -->
+      <div class="form-group">
+        <label>Category</label>
+        <select formControlName="category">
+          <option value="software-development">Software Development</option>
+          <option value="sales">Sales</option>
+          <option value="marketing">Marketing</option>
+        </select>
+      </div>
+
+      <!-- Is Approved -->
+      <div class="form-group">
+        <label>Is Approved</label>
+        <input type="checkbox" formControlName="isApproved">
+      </div>
+
+      <!-- Is Active -->
+      <div class="form-group">
+        <label>Is Active</label>
+        <input type="checkbox" formControlName="isActive">
+      </div>
+
+      <!-- Job Type -->
+      <div class="form-group">
+        <label>Job Type</label>
+        <select formControlName="jobType">
+          <option value="FULL_TIME">Full-time</option>
+          <option value="INTERNSHIP">Internship</option>
+          <option value="PART_TIME">Part-time</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="jobForm.invalid">Post Job</button>
+    </form>
+  </div>
+</div>

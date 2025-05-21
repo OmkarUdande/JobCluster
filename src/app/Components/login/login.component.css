@@ -1,0 +1,114 @@
+/* Role Buttons Section */
+.role-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.role-buttons button {
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Button Colors */
+.role-buttons button:nth-child(1) {
+  background: linear-gradient(90deg, #4caf50, #1e90ff);
+}
+
+.role-buttons button:nth-child(2) {
+  background: linear-gradient(90deg, #ff9800, #ff4e50);
+}
+
+.role-buttons button:nth-child(3) {
+  background: linear-gradient(90deg, #f44336, #d32f2f);
+}
+
+/* Hover Effects */
+.role-buttons button:hover {
+  transform: scale(1.06);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Login Form Section */
+.login-form h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 24px;
+  color: #1e90ff;
+  font-family: "Poppins", sans-serif;
+}
+
+.login-form form {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #eceff1, #ffffff);
+}
+
+/* Form Input Styling */
+.login-form form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.login-form form div label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #37474f;
+  margin-bottom: 10px;
+}
+
+.login-form form div input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #cfd8dc;
+  border-radius: 10px;
+  width: 100%;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.login-form form div input:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+/* Submit Button */
+.login-form form button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #1e90ff, #4a90e2);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.login-form form button[type="submit"]:hover {
+  background: linear-gradient(90deg, #357ab8, #1e70ff);
+  transform: scale(1.05);
+}
+
+/* Response Messages */
+.response-message {
+  font-size: 18px;
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 20px;
+}
+
+.response-message.error {
+  color: #dc3545;
+}

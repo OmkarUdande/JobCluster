@@ -1,0 +1,65 @@
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+strong {
+  color: #222;
+}
+
+.enroll-button, .pay-button {
+  display: inline-block;
+  background: #ff6f00;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.enroll-button:hover, .pay-button:hover {
+  background: #e65c00;
+}
+
+.payment-section, .payment-receipt {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.payment-receipt h2 {
+  color: #28a745; /* Green for success */
+}
+
+.payment-receipt p {
+  font-size: 16px;
+  color: #333;
+}
+
+.bi {
+  font-size: 20px;
+  margin-right: 5px;
+}

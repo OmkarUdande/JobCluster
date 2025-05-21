@@ -1,0 +1,68 @@
+<div class="register-form" *ngIf="!formSubmitted">
+  <h2>Register</h2>
+  <div>
+    <button class="job-seeker-button" (click)="showForm('jobSeeker')">Register as Job Seeker</button>
+    <button class="admin-button" (click)="showForm('admin')">Register as Admin</button>
+  </div>
+
+  <!-- Job Seeker Registration Form -->
+  <form class="job-seeker-form" *ngIf="selectedForm === 'jobSeeker'" (ngSubmit)="register()">
+    <div>
+      <label>Full Name:</label>
+      <input type="text" name="fullName" [(ngModel)]="userData.fullName" required />
+    </div>
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email" [(ngModel)]="userData.email" required />
+    </div>
+    <div>
+      <label>Skills:</label>
+      <input type="text" name="skills" [(ngModel)]="userData.skills" />
+    </div>
+    <div>
+      <label>User Role:</label>
+      <select name="role" [(ngModel)]="userData.role" required>
+        <option value="Job Seeker">Job Seeker</option>
+      </select>
+    </div>
+    <div>
+      <label>Phone Number:</label>
+      <input type="text" name="phone" [(ngModel)]="userData.phone" required />
+    </div>
+    <div>
+      <label>Password:</label>
+      <input type="password" name="password" [(ngModel)]="userData.password" required />
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <!-- Admin Registration Form -->
+  <form class="admin-form" *ngIf="selectedForm === 'admin'" (ngSubmit)="register()">
+    <div>
+      <label>User Role:</label>
+      <select name="role" [(ngModel)]="userData.role" required>
+        <option value="Employer">Employer</option>
+        <option value="Trainer">Trainer</option>
+      </select>
+    </div>
+
+    <div class="employer-fields">
+      <label>Name of Organisation/Institute:</label>
+      <input type="text" name="fullName" [(ngModel)]="userData.fullName" required />
+      <label>Phone Number:</label>
+      <input type="text" name="phone" [(ngModel)]="userData.phone" required />
+      <label>Email:</label>
+      <input type="email" name="email" [(ngModel)]="userData.email" required />
+      <label>Password:</label>
+      <input type="password" name="password" [(ngModel)]="userData.password" required />
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+<!-- Success Message After Form Submission -->
+<p *ngIf="formSubmitted" class="big-message">
+  {{ message }}
+</p>

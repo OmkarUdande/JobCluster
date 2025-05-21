@@ -1,0 +1,49 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f4f4f9;
+    color: #333;
+}
+
+.hero-section {
+    background: linear-gradient(90deg, #ff4e50, #1e90ff);
+    padding: 120px 0;
+    animation: gradient-animation 6s infinite alternate ease-in-out;
+    text-align: center;
+}
+
+@keyframes gradient-animation {
+    0% { background: linear-gradient(90deg, #ff4e50, #1e90ff); }
+    100% { background: linear-gradient(90deg, #1e90ff, #ff4e50); }
+}
+
+.animated-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    animation: color-animation 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes color-animation {
+    0% { color: #ffdb58; }
+    100% { color: #ffffff; }
+}
+
+.features {
+    padding: 60px 0;
+    background: #eceff1;
+    text-align: center;
+}
+
+.feature-box {
+    padding: 25px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-box:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,118 @@
+/* Make the navbar larger */
+.navbar {
+    padding: 20px 40px;
+    font-size: 18px;
+    background-color: blue; /* Blue color */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+    color: #FFD700; /* Gold color on hover */
+}
+
+/* Navbar links styling */
+.navbar-nav .nav-link {
+    color: black;
+    padding: 12px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(24, 13, 224, 0.2);
+    border-radius: 8px;
+    transform: scale(1.05);
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: #0056b3; /* Darker blue */
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown-item {
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Navbar search box */
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Navbar button */
+.btn-outline-success {
+    color: white;
+    border-color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-outline-success:hover {
+    background-color: white;
+    color: #007BFF;
+}
+
+/* Animation for dropdown */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.dashboard-container {
+  padding: 20px;
+}
+
+.profile-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-right: 10px;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.logout-btn:hover {
+  background-color: darkred;
+}

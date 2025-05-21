@@ -1,0 +1,66 @@
+<div class="container mt-4">
+  <h2 class="text-center">Upload New Course</h2>
+  <div class="admin-form">
+    <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+
+      <!-- Title -->
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input id="title" type="text" formControlName="title" placeholder="Enter course title" required />
+      </div>
+
+      <!-- Description -->
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" formControlName="description" rows="3" placeholder="Enter course description" required></textarea>
+      </div>
+
+      <!-- Paid -->
+      <div class="checkbox-group">
+        <input id="paid" type="checkbox" formControlName="paid" />
+        <label for="paid">Is Paid?</label>
+      </div>
+
+      <!-- Price (Visible only if Paid is checked) -->
+      <div class="form-group" *ngIf="courseForm.get('paid')?.value">
+        <label for="price">Price</label>
+        <input id="price" type="number" formControlName="price" placeholder="Enter course price" required min="0" />
+      </div>
+
+      <!-- Video URL -->
+      <div class="form-group">
+        <label for="videoUrl">Video URL</label>
+        <input id="videoUrl" type="url" formControlName="videoUrl" placeholder="Enter video URL" />
+      </div>
+
+      <!-- PDF URL -->
+      <div class="form-group">
+        <label for="pdfUrl">PDF URL</label>
+        <input id="pdfUrl" type="url" formControlName="pdfUrl" placeholder="Enter PDF URL" />
+      </div>
+
+      <!-- Live Workshop -->
+      <div class="checkbox-group">
+        <input id="liveWorkshop" type="checkbox" formControlName="liveWorkshop" />
+        <label for="liveWorkshop">Live Workshop?</label>
+      </div>
+
+      <!-- Course Duration -->
+      <div class="form-group">
+        <label for="courseDuration">Course Duration</label>
+        <input id="courseDuration" type="text" formControlName="courseDuration" placeholder="Enter course duration (e.g., 3 months)" required />
+      </div>
+
+      <!-- Name of Organization -->
+      <div class="form-group">
+        <label for="organization">Name of Organization</label>
+        <input id="organization" type="text" formControlName="organization" placeholder="Enter name of organization" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="courseForm.invalid">Submit</button>
+    </form>
+
+    <!-- Enhanced Messaging -->
+    <!-- <p *ngIf="message" class="form-message">{{ message }}</p> -->
+  </div>
+</div>

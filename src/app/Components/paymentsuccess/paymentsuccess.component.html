@@ -1,0 +1,11 @@
+<div class="container payment-success">
+  <h2>🎉 Payment Completed Successfully!</h2>
+  <p><strong>Course Title:</strong> {{ paymentDetails.courseTitle }}</p>
+  <p><strong>Course Price:</strong> ₹{{ paymentDetails.coursePrice }}</p>
+  <p><strong>Transaction ID:</strong> {{ paymentDetails.transactionId }}</p>
+  <p><strong>Amount Paid:</strong> ₹{{ paymentDetails.amount }}</p>
+  <p><strong>Payment Date:</strong> {{ paymentDetails.paymentDate }}</p>
+  <p><strong>Status:</strong> {{ paymentDetails.status }}</p>
+  <p><strong>Message:</strong> {{ paymentDetails.message }}</p>
+  <button class="go-back btn btn-primary" (click)="goBack()">Back to Courses</button>
+</div>

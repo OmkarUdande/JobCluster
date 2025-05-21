@@ -1,0 +1,19 @@
+<div class="container">
+
+  <!-- Course Details Section -->
+<app-course-details *ngIf="selectedCourse" [course]="selectedCourse"></app-course-details>
+
+
+<h1>Explore Our Courses</h1>
+<div class="course-list">
+  <div class="course-card" *ngFor="let course of filteredCourses">
+    <h3>{{ course.title }}</h3>
+    <p>{{ course.description }}</p>
+    <p *ngIf="course.paid" class="price">Price: ₹{{ course.price }}</p>
+    <button class="view-details" (click)="viewCourseDetails(course)">View Details</button>
+
+  </div>
+</div>
+
+
+

@@ -1,0 +1,33 @@
+.admin-form {
+  background: linear-gradient(135deg, #ff6f61, #6b92c0);
+  padding: 25px;
+  border-radius: 15px;
+  color: white;
+}
+
+.admin-form h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn-primary {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #ff6f61;
+}
+
+.btn-primary:hover {
+  background-color: #e85b50;
+}
